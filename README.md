@@ -3,7 +3,7 @@
 ## 1.Overview
 The code for paper "Curvature-Aware Multi-View Graph Pooling with Negative Curvature Rewiring". 
 
-![image](data/Fig2.PNG)
+![image](data/Fig2.jpg)
 
 The repository is organized as follows:
 * **`MVRPool/`** - Contains model training scripts and parameter configuration code
