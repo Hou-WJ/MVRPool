@@ -1,4 +1,3 @@
-
 from torch.nn import Parameter
 from torch_geometric.nn import GCNConv, GINConv
 from torch_geometric.nn.models import MLP
@@ -14,16 +13,6 @@ from torch_geometric.nn.norm import LayerNorm, GraphNorm
 
 from models.loss import global_global_contrast_loss, global_local_contrast_loss, \
     diversity_representation_loss, specificity_node_distribution_loss_fast, perturb_scores
-
-
-def build_gin_layer(in_dim, out_dim):
-    mlp = nn.Sequential(
-        nn.Linear(in_dim, out_dim),
-        nn.ReLU(),
-        nn.Linear(out_dim, out_dim),
-    )
-    return GINConv(mlp, train_eps=True)
-
 
 class MultiViewRewiringGraphPooling(torch.nn.Module):
 
